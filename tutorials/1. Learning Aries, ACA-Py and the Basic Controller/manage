@@ -33,7 +33,7 @@ usage() {
 
             Examples:
             $0 start
-            $0 start bob-agent
+            $0 start music-agent
 
       start - Same as up
 
@@ -62,7 +62,7 @@ EOF
 # -----------------------------------------------------------------------------------------------------------------
 # Default Settings:
 # -----------------------------------------------------------------------------------------------------------------
-DEFAULT_CONTAINERS="tails-server bob-agent alice-agent carol-agent setup ledger-nodes ledger-browser alice-notebook bob-notebook carol-notebook"
+DEFAULT_CONTAINERS="tails-server music-agent dm-agent sp-agent setup ledger-nodes ledger-browser dm-notebook music-notebook sp-notebook"
 
 # -----------------------------------------------------------------------------------------------------------------
 # Functions:
@@ -118,47 +118,47 @@ configureEnvironment() {
   export WALLET_TYPE="indy"
   export STORAGE_PATH=${STORAGE_PATH:-/tmp/tails-files}
 
-  # bob-agent
-  export BOB_AGENT_NAME="Bob"
-  export BOB_ADMIN_PORT=8051
-  export BOB_HTTP_PORT=8050
-  export BOB_WEBHOOK_PORT=8052
-  export BOB_WEBHOOK_URL=${BOB_WEBHOOK_URL:-http://$DOCKERHOST:$BOB_WEBHOOK_PORT}
-  export BOB_AGENT_ENDPOINT=${BOB_AGENT_ENDPOINT:-http://$DOCKERHOST:$BOB_HTTP_PORT}
-  export BOB_API_KEY="bob_api_123456789"
-  export BOB_WALLET_SEED="bob_seed_00000000000000000000000"
-  export BOB_JUPYTER_PORT="8889"
-  export BOB_WALLET_NAME="Bob Wallet"
-  export BOB_WALLET_KEY="bob_key_00000000000000000000000"
-  # export BOB_ADMIN_SECURE="true"
+  # music-agent
+  export MUSIC_AGENT_NAME="Bob"
+  export MUSIC_ADMIN_PORT=8051
+  export MUSIC_HTTP_PORT=8050
+  export MUSIC_WEBHOOK_PORT=8052
+  export MUSIC_WEBHOOK_URL=${MUSIC_WEBHOOK_URL:-http://$DOCKERHOST:$MUSIC_WEBHOOK_PORT}
+  export MUSIC_AGENT_ENDPOINT=${MUSIC_AGENT_ENDPOINT:-http://$DOCKERHOST:$MUSIC_HTTP_PORT}
+  export MUSIC_API_KEY="music_api_123456789"
+  export MUSIC_WALLET_SEED="music_seed_00000000000000000000000"
+  export MUSIC_JUPYTER_PORT="8889"
+  export MUSIC_WALLET_NAME="Bob Wallet"
+  export MUSIC_WALLET_KEY="music_key_00000000000000000000000"
+  # export MUSIC_ADMIN_SECURE="true"
 
 
-  # alice-agent
-  export ALICE_AGENT_NAME="Alice"
-  export ALICE_ADMIN_PORT=8021
-  export ALICE_API_KEY="alice_api_123456789"
-  export ALICE_HTTP_PORT=8020
-  export ALICE_WEBHOOK_PORT=8022
-  export ALICE_WEBHOOK_URL=${ALICE_WEBHOOK_URL:-http://$DOCKERHOST:$ALICE_WEBHOOK_PORT}
-  export ALICE_AGENT_ENDPOINT=${ALICE_AGENT_ENDPOINT:-http://$DOCKERHOST:$ALICE_HTTP_PORT}
-  export ALICE_WALLET_SEED="alice_seed_000000000000000000000"
-  export ALICE_JUPYTER_PORT="8888"
-  export ALICE_WALLET_NAME="Alice Wallet"
-  export ALICE_WALLET_KEY="alice_key_00000000000000000000000"
+  # dm-agent
+  export DM_AGENT_NAME="Alice"
+  export DM_ADMIN_PORT=8021
+  export DM_API_KEY="dm_api_123456789"
+  export DM_HTTP_PORT=8020
+  export DM_WEBHOOK_PORT=8022
+  export DM_WEBHOOK_URL=${DM_WEBHOOK_URL:-http://$DOCKERHOST:$DM_WEBHOOK_PORT}
+  export DM_AGENT_ENDPOINT=${DM_AGENT_ENDPOINT:-http://$DOCKERHOST:$DM_HTTP_PORT}
+  export DM_WALLET_SEED="dm_seed_000000000000000000000"
+  export DM_JUPYTER_PORT="8888"
+  export DM_WALLET_NAME="Alice Wallet"
+  export DM_WALLET_KEY="dm_key_00000000000000000000000"
 
-  # carol-agent
-  export CAROL_AGENT_NAME="Carol"
-  export CAROL_ADMIN_PORT=8081
-  export CAROL_API_KEY="carol_api_123456789"
-  export CAROL_HTTP_PORT=8080
-  export CAROL_WEBHOOK_PORT=8082
-  export CAROL_WEBHOOK_URL=${CAROL_WEBHOOK_URL:-http://$DOCKERHOST:$CAROL_WEBHOOK_PORT}
-  export CAROL_AGENT_ENDPOINT=${CAROL_AGENT_ENDPOINT:-http://$DOCKERHOST:$CAROL_HTTP_PORT}
-  export CAROL_WALLET_SEED="carol_seed_000000000000000000000"
-  export CAROL_JUPYTER_PORT="8887"
-  export CAROL_WALLET_NAME="Carol Wallet"
-  export CAROL_WALLET_KEY="carol_key_00000000000000000000000"
-  # export CAROL_ADMIN_SECURE="true"
+  # sp-agent
+  export SP_AGENT_NAME="Carol"
+  export SP_ADMIN_PORT=8081
+  export SP_API_KEY="sp_api_123456789"
+  export SP_HTTP_PORT=8080
+  export SP_WEBHOOK_PORT=8082
+  export SP_WEBHOOK_URL=${SP_WEBHOOK_URL:-http://$DOCKERHOST:$SP_WEBHOOK_PORT}
+  export SP_AGENT_ENDPOINT=${SP_AGENT_ENDPOINT:-http://$DOCKERHOST:$SP_HTTP_PORT}
+  export SP_WALLET_SEED="sp_seed_000000000000000000000"
+  export SP_JUPYTER_PORT="8887"
+  export SP_WALLET_NAME="Carol Wallet"
+  export SP_WALLET_KEY="sp_key_00000000000000000000000"
+  # export SP_ADMIN_SECURE="true"
 
 }
 
