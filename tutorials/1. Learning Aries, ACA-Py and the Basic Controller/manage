@@ -125,12 +125,12 @@ configureEnvironment() {
   export BOB_WEBHOOK_PORT=8052
   export BOB_WEBHOOK_URL=${BOB_WEBHOOK_URL:-http://$DOCKERHOST:$BOB_WEBHOOK_PORT}
   export BOB_AGENT_ENDPOINT=${BOB_AGENT_ENDPOINT:-http://$DOCKERHOST:$BOB_HTTP_PORT}
-  # export BOB_API_KEY="bob_api_123456789"
+  export BOB_API_KEY="bob_api_123456789"
   export BOB_WALLET_SEED="bob_seed_00000000000000000000000"
   export BOB_JUPYTER_PORT="8889"
   export BOB_WALLET_NAME="Bob Wallet"
   export BOB_WALLET_KEY="bob_key_00000000000000000000000"
-  export BOB_ADMIN_SECURE="true"
+  # export BOB_ADMIN_SECURE="true"
 
 
   # alice-agent

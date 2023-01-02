@@ -15,7 +15,7 @@ services:
       - WALLET_NAME=${BOB_WALLET_NAME}
       - WALLET_TYPE=${WALLET_TYPE}
       - WALLET_KEY=${BOB_WALLET_KEY}
-      # - ACAPY_ADMIN_API_KEY=${BOB_API_KEY}
+      - ACAPY_ADMIN_API_KEY=${BOB_API_KEY}
       - ACAPY_ADMIN_INSECURE_MODE=${BOB_ADMIN_SECURE}
       - ACAPY_TAILS_SERVER_BASE_URL=http://tails-server:6543
       - GENESIS_URL=${GENESIS_URL}
@@ -134,7 +134,7 @@ services:
       - ALICE_WEBHOOK_HOST=0.0.0.0
       - BOB_ADMIN_URL=http://bob-agent:${BOB_ADMIN_PORT}
       - BOB_WEBHOOK_PORT=${BOB_WEBHOOK_PORT}
-      # - BOB_API_KEY=${BOB_API_KEY}
+      - BOB_API_KEY=${BOB_API_KEY}
       - BOB_WEBHOOK_HOST=0.0.0.0
       - CAROL_ADMIN_URL=http://carol-agent:${CAROL_ADMIN_PORT}
       - CAROL_WEBHOOK_PORT=${CAROL_WEBHOOK_PORT}
@@ -169,7 +169,8 @@ services:
       dockerfile: dockerfiles/controllers/Dockerfile.basiccontroller
       args:
         - jupyter_port=${BOB_JUPYTER_PORT}
-        # - BOB_API_KEY=${BOB_API_KEY}
+        - BOB_API_KEY=${BOB_API_KEY}
+
     depends_on:
       - bob-agent
     networks:
