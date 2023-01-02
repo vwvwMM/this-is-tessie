@@ -119,7 +119,7 @@ configureEnvironment() {
   export STORAGE_PATH=${STORAGE_PATH:-/tmp/tails-files}
 
   # music-agent
-  export MUSIC_AGENT_NAME="Bob"
+  export MUSIC_AGENT_NAME="MUSIC"
   export MUSIC_ADMIN_PORT=8051
   export MUSIC_HTTP_PORT=8050
   export MUSIC_WEBHOOK_PORT=8052
@@ -128,13 +128,13 @@ configureEnvironment() {
   export MUSIC_API_KEY="music_api_123456789"
   export MUSIC_WALLET_SEED="music_seed_00000000000000000000000"
   export MUSIC_JUPYTER_PORT="8889"
-  export MUSIC_WALLET_NAME="Bob Wallet"
+  export MUSIC_WALLET_NAME="MUSIC Wallet"
   export MUSIC_WALLET_KEY="music_key_00000000000000000000000"
   # export MUSIC_ADMIN_SECURE="true"
 
 
   # dm-agent
-  export DM_AGENT_NAME="Alice"
+  export DM_AGENT_NAME="DM"
   export DM_ADMIN_PORT=8021
   export DM_API_KEY="dm_api_123456789"
   export DM_HTTP_PORT=8020
@@ -143,11 +143,11 @@ configureEnvironment() {
   export DM_AGENT_ENDPOINT=${DM_AGENT_ENDPOINT:-http://$DOCKERHOST:$DM_HTTP_PORT}
   export DM_WALLET_SEED="dm_seed_000000000000000000000"
   export DM_JUPYTER_PORT="8888"
-  export DM_WALLET_NAME="Alice Wallet"
+  export DM_WALLET_NAME="DM Wallet"
   export DM_WALLET_KEY="dm_key_00000000000000000000000"
 
   # sp-agent
-  export SP_AGENT_NAME="Carol"
+  export SP_AGENT_NAME="SP"
   export SP_ADMIN_PORT=8081
   export SP_API_KEY="sp_api_123456789"
   export SP_HTTP_PORT=8080
@@ -156,7 +156,7 @@ configureEnvironment() {
   export SP_AGENT_ENDPOINT=${SP_AGENT_ENDPOINT:-http://$DOCKERHOST:$SP_HTTP_PORT}
   export SP_WALLET_SEED="sp_seed_000000000000000000000"
   export SP_JUPYTER_PORT="8887"
-  export SP_WALLET_NAME="Carol Wallet"
+  export SP_WALLET_NAME="SP Wallet"
   export SP_WALLET_KEY="sp_key_00000000000000000000000"
   # export SP_ADMIN_SECURE="true"
 
