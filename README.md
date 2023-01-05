@@ -2,8 +2,9 @@
 
 **This is a repository based on PyDentity**
 
-## Prerequitite
-Make sure to switch to branch: *original_name* to reproduce our result
+## Prerequisite
+1. Make sure to switch to branch: *original_name* to reproduce our result
+2. The working directory of our project is `./tutorials/1. Learning Aries, ACA-Py and the Basic Controller/`
 
 ## Reproduce procedure
 1. run `./manage start`  and in `/tutorials/1. Learning Aries, ACA-Py and the Basic Controller/` access the notebooks by running `./scripts/get_URLS.sh`
